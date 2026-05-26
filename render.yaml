@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: bfhl-api
+    runtime: docker
+    repo: https://github.com/priyanshuyadav03/BajajProject
+    branch: main
+    plan: free
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: PORT
+        value: 8080
