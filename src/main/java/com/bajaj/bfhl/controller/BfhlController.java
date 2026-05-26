@@ -33,4 +33,12 @@ public class BfhlController {
     public ResponseEntity<Map<String, Integer>> getOperationCode() {
         return ResponseEntity.ok(Map.of("operation_code", 1));
     }
+
+    /**
+     * GET /health — Health check endpoint.
+     */
+    @GetMapping("/health")
+    public ResponseEntity<Map<String, String>> healthCheck() {
+        return ResponseEntity.ok(Map.of("status", "healthy"));
+    }
 }
